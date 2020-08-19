@@ -5,6 +5,8 @@ module.exports = {
         author: `@gatsbyjs`,
     },
     plugins: [
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
         {
@@ -21,8 +23,6 @@ module.exports = {
                 path: `${__dirname}/src/pages`,
             },
         },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
         `gatsby-transformer-remark`,
         {
         resolve: `gatsby-plugin-manifest`,
