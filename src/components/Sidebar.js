@@ -1,11 +1,26 @@
 import React from 'react'
-import { Card, CardTitle, CardBody, Form, FormGroup, Input} from "reactstrap"
+import { Card, CardText, CardTitle, CardBody, Form, FormGroup, Input} from "reactstrap"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
 // functional component
-const Sidebar = () => (
+const Sidebar = ({ author, authorFluid }) => (
     <div>
+        {author && (
+            <Card>
+                <Img className="card-image-top" fluid={authorFluid}/>
+                <CardBody>
+                    <CardTitle className="text-center text-uppercase mb-3">{author.name}</CardTitle>
+                    <CardText>{author.bio}</CardText>
+                    <div className="author-social-links text-center">
+                        <ul>
+                            <li><a href={author.facebook}></a></li>
+                        </ul>
+                    </div>
+                </CardBody>
+            </Card>
+        )}
+
         <Card>
             <CardBody>
                 <CardTitle className="text-center text-uppercase mb-3">

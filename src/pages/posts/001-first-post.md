@@ -1,7 +1,7 @@
 ---
 title: "First Past the Post"
 date: 2020-08-19 16:31:00
-author: "Matt Heslington"
+author: "Matthew"
 image: "../../images/image-test-2.jpg"
 tags:
 - latin

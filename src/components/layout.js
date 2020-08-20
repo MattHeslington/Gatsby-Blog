@@ -8,7 +8,7 @@ import Footer from "../components/Footer"
 import Header from "./header"
 import '../styles/index.scss'
 
-const Layout = ({ children, pageTitle }) => {
+const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,7 +26,7 @@ const Layout = ({ children, pageTitle }) => {
             <h1>{pageTitle}</h1>
             <Row>
                 <Col md="8">{children}</Col>
-                <Col md="4"><Sidebar/></Col>
+                <Col md="4"><Sidebar author={postAuthor} authorFluid={authorImageFluid}/></Col>
             </Row>
             <footer>
             © {new Date().getFullYear()}, Built with

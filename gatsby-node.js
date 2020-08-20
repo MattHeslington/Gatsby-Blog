@@ -1,4 +1,5 @@
 const { slugify } = require('./util/utilityFunctions');
+const authors = require('./util/authors')
 const path = require('path')
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -44,7 +45,9 @@ exports.createPages = ({actions, graphql}) => {
                 component: singlePostTemplate,
                 context: {
                     // slug for template
-                    slug: node.fields.slug
+                    slug: node.fields.slug,
+                    //find author image url from Authors and pass it to the sing post template
+                    imageUrl: authors.find(x => x.name === node.frontmatter.author).imageUrl
                 }
             })
         })

@@ -1,7 +1,7 @@
 ---
 title: "Third Thursday"
 date: 2020-08-19 16:33:00
-author: "Matt Heslington"
+author: "Matthew"
 image: "../../images/image-test-4.jpg"
 tags:
 - latin

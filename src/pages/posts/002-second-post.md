@@ -1,7 +1,7 @@
 ---
 title: "Secopnds Pass Away"
 date: 2020-08-19 16:32:00
-author: "Matt Heslington"
+author: "Constance"
 image: "../../images/image-test-3.jpg"
 tags:
 - code
