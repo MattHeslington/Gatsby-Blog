@@ -2,8 +2,7 @@
 title: "Secopnds Pass Away"
 date: 2020-08-19 16:32:00
 author: "Matt Heslington"
-path: "/second-post"
-image: "../../images/image-test.jpg"
+image: "../../images/image-test-3.jpg"
 tags:
 - code
 - html

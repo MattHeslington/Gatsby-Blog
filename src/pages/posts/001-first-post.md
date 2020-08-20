@@ -2,8 +2,7 @@
 title: "First Past the Post"
 date: 2020-08-19 16:31:00
 author: "Matt Heslington"
-path: "/first-post"
-image: "../../images/image-test.jpg"
+image: "../../images/image-test-2.jpg"
 tags:
 - latin
 - essay writing
