@@ -7,10 +7,12 @@ import Img from "gatsby-image"
 import { slugify } from "../../util/utilityFunctions"
 import authors from '../../util/authors'
 
-const SinglePost = ({data}) => {
+const SinglePost = ({data, pageContext}) => {
 
     const post = data.markdownRemark.frontmatter
     const author = authors.find(x => x.name === post.author)
+
+    const baseUrl = 'http://localhost:8000'
 
     return (
         <Layout pageTitle={post.title} postAuthor={author} authorImageFluid={data.file.childImageSharp.fluid}>
@@ -34,6 +36,26 @@ const SinglePost = ({data}) => {
                         </ul>
                     </CardBody>
                 </Card>
+                <h3 className="text-center">Share this post</h3>
+                <div className="text-center social-share-links">
+                    <ul>
+                        <li>
+                            <a href={'https://www.facebook.com/sharer.php?u='+ baseUrl + pageContext.slug} className="facebook" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-facebook-f fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={'https://www.twitter.com/share?url='+ baseUrl + pageContext.slug + '&text=' + post.title + '&via' + 'twitterhandle'} className="twitter" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-twitter-f fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={'https://www.linkedin.com/shareArticle?url='+ baseUrl + pageContext.slug} className="google" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-linkedin-f fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
         </Layout>
     )
 }
